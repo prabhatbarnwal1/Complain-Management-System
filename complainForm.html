@@ -1,0 +1,176 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complain form</title>
+    <link rel="stylesheet" href="./complainCss.css">
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <?php
+    // Start session to access user data
+
+    session_start();
+    // Check if user is logged in
+    if (!isset($_SESSION['name'])) {
+        // Redirect to login page if not logged in
+        header("Location: ../Complain_Management_System-main/logInAndSignUp/login.html"); // Assuming your login page is login.html
+        exit();
+    }
+    ?>
+    <nav>
+        <div class="nav__header">
+          <div class="logo nav__logo">
+            <img  src="./assets/logo1.png" alt="">
+            <a href="../index.html">Complain<span>System</span></a>
+          </div>
+          <div class="nav__menu__btn" id="menu-btn">
+            <span><i class="ri-menu-line"></i></span>
+          </div>
+        </div>
+        <ul class="nav__links" id="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#feedback">Feedback</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+        </ul>
+        <!-- ../Complain_Management_System-main/logInAndSignUp/login.html -->
+        <div class="nav__btn">
+          <button class="btn"><i class="ri-user-fill"></i> <a href="./dashboard/student.php"><?php echo $_SESSION['name']; ?></a></button>
+        </div>
+      </nav>
+
+    <section>
+        <input type="checkbox" id="one">
+    <input type="checkbox" id="two">
+  <div class="container1">
+    <h1>Complain Form</h1>
+    <div class="indicator">
+        <div class="step step1">
+            <div>1</div>
+            <span>Basic</span>
+        </div>
+        <div class="line line2"></div>
+        <div class="step step2">
+            <div>2</div>
+            <span>Basic</span>
+        </div>
+        
+        <div class="line line3"></div>
+        <div class="step step3">
+            <div>3</div>
+            <span>Image</span>
+        </div>
+
+    </div>
+
+    <div class="panel">
+        <div class="page1">
+            <form action="complainsubMit.php" method="post" class="form" enctype="multipart/form-data">
+                <h2>Basic Information</h2>
+                <div class="form-group">
+                    <input type="text" name="room" required>
+                    <label for="">Room No</label>
+                </div>
+                <div class="form-group">
+                    <input type="text" name="email" required>
+                    <label for="">Email</label>
+                </div>
+                <div class="form-group">
+                    <input type="number" name="phone" required>
+                    <label for="">Phone no</label>
+                </div>
+                <div class="btn-group">
+                    <label for="one" class="btn btn-f">Next</label>
+                </div>
+            <!-- </form> -->
+        </div>
+        <div class="page2">
+            <!-- <form action="complainsubMit.php" method="post" class="form"> -->
+            <div class="form">
+                <h2>Basic Information</h2>
+                <div class="form-group">
+                    <select type="text" name="complain_type" required>
+                        <option>Electrician</option>
+                        <option>Plumbing</option>
+                        <option>Cleaning</option>
+                        <option>Carpenter</option>
+                      </select>
+                    <label for="">Type of complain</label>
+                </div>
+                <div class="form-group">
+                    <select type="text" name="priority" required>
+                        <option>High</option>
+                        <option>Medium</option>
+                      </select>
+                    <label for="">Priority</label>
+                </div>
+                <div class="btn-group">
+                    <label for="one" class="btn">Previous</label>
+                    <label for="two" class="btn">Next</label>
+                </div>
+                </div>  
+            <!-- </form> -->
+        </div>
+
+        
+        <div class="page3">
+            <!-- <form action="complainsubMit.php" method="post" class="form"> -->
+              <div class="form">
+                <h2>Image</h2>
+                <div class="form-group textarea">
+                    <textarea required name="description"></textarea>
+                    <label for="">Description</label>
+                </div>
+                <div class="form-group">
+                    <input  type="file" name="image" required>
+                </div>
+                <div class="btn-group">
+                    <label for="two" class="btn">Previous</label>
+                    <button type="submit" name="submit" class="btn">Submit</button>
+                </div>
+                </div>
+            </form>
+        </div>
+
+        
+    </div>
+  </div> 
+    </section>
+    
+  <footer class="footer" id="contact">
+    <div class="section__container footer__container">
+      <div class="footer__col">
+        <div class="logo footer__logo">
+          <a href="#">Complain<span>System</span></a>
+        </div>
+        <p class="section__description">
+          Simplify Complaints, Amplify Solutions
+        </p>
+      </div>
+    
+      <div class="footer__col">
+        <h4>Information</h4>
+        <ul class="footer__links">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Feedback</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+    
+    </div>
+    <div class="footer__bar">
+      Copyright © 2024 ComplainSystem. All rights reserved.
+    </div>
+  </footer>     
+</body>
+</html>

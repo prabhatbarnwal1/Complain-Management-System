@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+section{
+    margin-top: 20px;
+    margin-bottom: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background: white;
+}
+
+.container1{
+    width: 430px;
+    height: 580px;
+    position: relative;
+    box-shadow: 0 0 8px rgba(0,0,0,0.3);
+    border-radius: 6px;
+    background: #FFF;
+    overflow: hidden;
+}
+
+.container1 h1{
+    position: absolute;
+    font-size: 40px;
+    top: 40px;
+    text-align: center;
+    width: 100%;
+    padding: 20px;
+}
+
+.container1 .indicator{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    top: 160px;
+}
+
+.indicator .step{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 5px;
+}
+
+.step div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 30px;
+    height: 30px;
+    border: 2px solid black;
+    border-radius: 50%;
+    font-weight: bold;
+}
+
+.step1 div{
+    border-color: teal;
+    background: teal;
+    color: #FFF;
+    transition: all 0.4s ease;
+}
+
+.step span{
+    font-weight: 600;
+    text-align: center;
+    transition: all 0.4s ease;
+}
+
+.step1 span{
+    color: teal;
+}
+
+.indicator .line{
+    width: 30px;
+    height: 30px;
+    border-top: 4px solid black;
+    transition: all 0.4s ease;
+}
+
+.container1 .panel{
+    width: 1720px;
+    height: 100%;
+    position: relative;
+    left: 0;
+    top: 0;
+    transition: all 0.4s ease;
+}
+
+.page1,.page2,.page3,.page4{
+    position: absolute;
+    height: 100%;
+    width: 430px;
+}
+
+.page1{
+    left: 0;
+}
+
+.page2{
+    left: 25%;
+}
+
+.page3{
+    left: 50%;
+}
+
+.page4{
+    left: 75%;
+}
+
+.form{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    top: 90px;
+}
+
+.form .form-group{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    width: 80%;
+    height: 50px;
+    margin: 15px 0;
+}
+
+textarea{
+    height: 50px;
+    width: 100%;
+    resize: none;
+}
+
+.form-group input,textarea,select{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 17px;
+    font-weight: 500;
+    outline: none;
+    border: 1px solid black;
+}
+
+.form-group label{
+    position: absolute;
+    pointer-events: none;
+    top: 0%;
+    left: 20px;
+    transform: translateY(-50%);
+    background: #fff;
+    transition: all 0.3s ease;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 3px;
+    color: #999;
+}
+
+
+
+.form .btn-group{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 80%;
+    height: 50px;
+}
+
+.btn-group .btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: teal;
+    color: #FFF;
+    text-transform: capitalize;
+    text-align: center;
+    width: 48%;
+    height: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    font-size: 17px;
+    font-weight: 500;
+    border-radius: 6px;
+    outline: none;
+    border: none;
+    box-shadow: 0 0 8px rgba(0,0,0,0.3);
+    cursor: pointer;
+}
+
+.btn-group .btn-f{
+    width: 100%;
+}
+
+.btn-group .btn:active{
+    transform: scale(0.95);
+}
+
+.btn-group .btn:hover{
+    opacity: 0.8;
+}
+
+#one:checked ~ .container1 .panel{
+    left: -430px;
+}
+
+#two:checked ~ .container1 .panel{
+    left: -860px;
+}
+
+#three:checked ~ .container1 .panel{
+    left: -1290px;
+}
+
+#one,#two,#three{
+    display: none;
+}
+
+#one:checked ~ .container1 .indicator .line1,
+#two:checked ~ .container1 .indicator .line2,
+#three:checked ~ .container1 .indicator .line3{
+    border-color: teal;
+}
+
+#one:checked ~ .container1 .indicator .step2 div,
+#two:checked ~ .container1 .indicator .step3 div,
+#three:checked ~ .container1 .indicator .step4 div{
+    border-color: teal;
+    background: teal;
+    color: #FFF;
+}
+
+#one:checked ~ .container1 .indicator .step2 span,
+#two:checked ~ .container1 .indicator .step3 span,
+#three:checked ~ .container1 .indicator .step4 span{
+    color: teal;
+}
+
+

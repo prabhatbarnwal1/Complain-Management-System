@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css">
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles.css">
+    <title>Login</title>
+</head>
+<body>
+  <nav>
+    <div class="nav__header">
+      <div class="logo nav__logo">
+        <img  src="../assets/logo1.png" alt="">
+        <a href="../index.html">Complain<span>System</span></a>
+      </div>
+      <div class="nav__menu__btn" id="menu-btn">
+        <span><i class="ri-menu-line"></i></span>
+      </div>
+    </div>
+    <ul class="nav__links" id="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#feedback">Feedback</a></li>
+      <li><a href="#contact">Contact Us</a></li>
+    </ul>
+    <div class="nav__btn">
+      <button class="btn"><i class="ri-user-fill"></i> <a href="../logInAndSignUp/login.html">Log in</a></button>
+    </div>
+
+
+  </nav>
+    <div class="form">
+      <div class="form-container">
+        <p class="title">Welcome back</p>
+        <form action="../dashboard/student.php" method="post" class="form">
+          <input type="email" name="email" class="input" placeholder="Email">
+          <select type="text" name="designation" class="input">
+            <option>Select</option>
+            <option selected>Student</option>
+            <option>Warden</option>
+          </select>
+          <input type="password" name="password" class="input" placeholder="Password">
+          <p class="page-link">
+            <span class="page-link-label">Forgot Password?</span>
+          </p>
+          <input type="submit" value="Login" class="form-btn">
+        </form>
+        <p class="sign-up-label">
+          Don't have an account?<span class="sign-up-link"><a href="./signUp.html">Sign up</a></span>
+        </p>
+      </div>
+    </div>
+      <footer class="footer" id="contact">
+        <div class="section__container footer__container">
+          <div class="footer__col">
+            <div class="logo footer__logo">
+              <a href="#">Complain<span>System</span></a>
+            </div>
+            <p class="section__description">
+              Simplify Complaints, Amplify Solutions
+            </p>
+          </div>
+        
+          <div class="footer__col">
+            <h4>Information</h4>
+            <ul class="footer__links">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Feedback</a></li>
+              <li><a href="#">Contact Us</a></li>
+            </ul>
+          </div>
+        
+        </div>
+        <div class="footer__bar">
+          Copyright © 2024 ComplainSystem. All rights reserved.
+        </div>
+      </footer>
+</body>
+</html>
